@@ -1,0 +1,71 @@
+/* 轻松学书稿的打印样式。字体按 macOS / Windows / Linux 依次回退，谁有用谁。 */
+@page { size: A4; margin: 20mm 18mm; }
+
+html { font-size: 11pt; }
+body {
+  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC",
+               "Source Han Serif SC", "WenQuanYi Zen Hei", serif;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background: #fff;
+  margin: 0;
+  max-width: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+               "Noto Sans CJK SC", "Source Han Sans SC", "WenQuanYi Zen Hei", sans-serif;
+  line-height: 1.35;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+/* 每章另起一页，第一章除外 */
+h1 {
+  font-size: 1.8em; font-weight: 700;
+  margin: 0 0 1em; padding-bottom: .3em;
+  border-bottom: 2px solid #333;
+  break-before: page; page-break-before: always;
+}
+h1:first-of-type { break-before: avoid; page-break-before: avoid; }
+h2 {
+  font-size: 1.35em; font-weight: 700;
+  margin: 1.6em 0 .6em; padding-left: .5em;
+  border-left: 4px solid #999;
+}
+h3 { font-size: 1.1em; font-weight: 700; margin: 1.2em 0 .4em; }
+
+p { margin: .5em 0; orphans: 2; widows: 2; }
+strong { font-weight: 700; }
+
+/* 例题多半写在引用块里：红边浅底，一眼认出 */
+blockquote {
+  margin: 1em 0;
+  padding: .5em 1em;
+  border-left: 3px solid #c0392b;
+  background: #f7f5f3;
+  color: #222;
+  break-inside: avoid;
+}
+
+code, pre {
+  font-family: "Menlo", "SF Mono", "Consolas", "DejaVu Sans Mono", monospace;
+  font-size: .9em;
+}
+pre {
+  white-space: pre-wrap;
+  background: #f6f6f3;
+  padding: .8em 1em;
+  border-radius: 4px;
+  break-inside: avoid;
+}
+
+math { font-family: "STIX Two Math", "Latin Modern Math", "Cambria Math", math; }
+/* 别改 display：Chrome 的公式排版靠默认的 block math */
+math[display="block"] { margin: .8em 0; }
+
+table { border-collapse: collapse; margin: 1em auto; break-inside: avoid; }
+th, td { border: 1px solid #bbb; padding: .3em .6em; vertical-align: top; }
+th { background: #f2f2ef; }
+
+img { max-width: 100%; }
+hr { border: 0; border-top: 1px solid #ddd; margin: 1.5em 0; }

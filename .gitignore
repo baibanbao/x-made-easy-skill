@@ -3,3 +3,4 @@
 *.tmp
 /.cache/
 /.venv/
+__pycache__/
