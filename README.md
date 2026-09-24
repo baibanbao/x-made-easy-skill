@@ -4,6 +4,17 @@
 
 它的核心不是把知识讲得更满，而是先替读者驱除预备恐惧：把术语脱西装，把符号翻成人话，先讲直觉，再讲规矩。
 
+## X Made Easy 成果展示
+
+[X Made Easy | 白板报](https://zhongwen.ai/x-made-easy-skill/)
+
+目前用X Made Easy Skill做出的「轻松学」系列书：
+
+- [奥数轻松学 | 白板报](https://zhongwen.ai/x-made-easy-skill/olympiad/)
+- [蛙泳轻松学 | 白板报](https://zhongwen.ai/x-made-easy-skill/breaststroke/)
+  - [蛙泳腿轻松学 | 白板报](https://zhongwen.ai/x-made-easy-skill/breaststroke-kick/)
+- 还在不断增加中
+
 ## 汤普森是怎么写的
 
 一百多年前，汤普森这样开始讲微积分（引自 1914 年第二版，中文是意译）：
