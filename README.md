@@ -32,18 +32,21 @@
 ## 一本书怎么长出来
 
 1. **摸清读者怕什么**：读者现在会什么，最怕哪 5–10 个术语或符号，学完要亲手做成哪件事。
-2. **先出骨架**：`00-目录与体例.md`，交你看风格和深浅，对路了再写正文。
+2. **先出骨架**：`00-目录与体例.md`，把读者、难处和章节安排写清；大项目可用样章校准风格。
 3. **逐章写**，每章五段：开篇除恐 → 白话化 → 直觉先行（说清什么可以先不管）→ 贴身例子与章末练习 → "这一章要带走的东西"，最后一句"就这样。"
 4. **写附录**：术语词典、一页纸速查、练习答案、我们抄过的近路、出处说明。
-5. **自检，出 PDF**。
+5. **逐字校对**正文和图中文字，用脚本查体例；需要时再出 PDF。
 
 三条铁律：是驱除恐惧，不是写教科书；事实核查，绝不捏造出处；不堆排比、不用感叹号、不说"显然"。
+
+修订已有小书时，先拆解外部教材的事实、动作、练习和图意，再把真正能帮助初学者的部分融入原有章节。练习要写清起点、动作、观察、修正和退出条件。定稿前逐字校对正文与图中文字；自检脚本不能代替这一步。详见 [外部教材融合与图文校对](references/source-integration-and-copyedit.md)。
 
 ## 目录
 
 ```
 SKILL.md                    skill 主说明与工作流
 references/style-guide.md   风格 DNA：汤普森原话、除恐开篇、脱西装四步、抄近路记账、目录模板
+references/source-integration-and-copyedit.md  外部教材融合、渐进练习、图文与纯文字校对
 references/pdf-build.md     合成 PDF 的两条路线（网页 / LaTeX）和踩过的坑
 scripts/check_book.py       书稿自检：感叹号、"显然"类禁词、五段式收尾、例子出处、开篇雷同
 scripts/build_pdf.sh        一条命令出 PDF（pandoc + Chrome/Chromium）
@@ -77,7 +80,7 @@ scripts/build_pdf.sh ~/X轻松学 "X轻松学"            # 要 pandoc 和 Chrom
 
 ## English
 
-A Chinese writing skill for Claude that turns any intimidating subject into a small "Made Easy" book, in the spirit of Silvanus P. Thompson's *Calculus Made Easy* (1910). It first names what scares the reader, strips each term down to plain words, tells the reader what can safely be ignored for now, teaches with small worked examples, and ends each chapter with a short "That's all." Output is one Markdown file per chapter, plus a checker script and a one-command PDF build. Chinese by default; it follows the user's language if asked in another.
+A writing skill for Codex, Claude Code, and other tools that turns an intimidating subject into a small "Made Easy" book, in the spirit of Silvanus P. Thompson's *Calculus Made Easy* (1910). It names what scares the reader, explains terms in plain words, teaches with small worked examples, and can integrate outside teaching material into an existing book. Output is one Markdown file per chapter, plus a checker script and an optional PDF build. Chinese by default; it follows the user's language if asked in another.
 
 更新记录见 [CHANGELOG.md](CHANGELOG.md)。
 
